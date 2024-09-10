@@ -56,7 +56,7 @@ interface ISendOtpRequest extends Request {
 
 const transporter = nodemailer.createTransport({
   
-  host: process.env.EMAIL_USER,
+  host: process.env.EMAIL_HOST,
   port: 587, // Default port for TLS
   secure: false, // Use TLS
   auth: {
