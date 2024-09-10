@@ -335,9 +335,6 @@ const forgotpass = async (req: IForgotPasswordRequest, res: Response): Promise<R
 
   } catch (error) {
     console.error('Error sending OTP:', error); // Detailed error logging
-    if (error) {
-      console.error('SMTP Response:', error); // SMTP server response
-    }
     return res.status(500).json({ message: 'Failed to send OTP',error});
   }
 };
